@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW프로젝트</title>
+    <style>
+        #header {
+            position : fixed;
+            background-color :darkblue;
+            text-align : center;
+            color : whitesmoke;
+            font-weight: bold;
+            font-family : 'Times New Roman', Times, serif;
+            height : 70px;
+            width : 1440px;
+            top : 0;
+            left : 0;
+            right : 0;
+            line-height: 70px;
+            margin : auto;
+            font-size: 25px;
+        }
+        nav ul{
+            width : 1440px;
+            background-color: rgb(19, 5, 22);
+            font-size: 20px;
+            margin: 0; 
+            padding: 0;
+
+        }
+
+        nav ul li {
+            width : 33%;
+            display: inline-block;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        #main{
+            position : fixed;
+            width : 1440px;
+            background-color :cadetblue;
+            height : 1400px;
+            text-align : center;
+        }
+        </style>
+</head>
+<body style="background-color:darkgray">
+    <div>
+    <div id ="header">SW프로젝트 이미지 분류 모델
+        <div id ="menu">
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:80">메인</a></li>
+                    <li><a href="http://localhost:80/classifier">결과</a></li>
+                    <li><a href="http://localhost:80/Help">도움말</a></li>
+                </ul>
+            </nav>
+        </div>
+    <div id ="main">
+        <p>이미지 예측 결과</p>
+        <br>
+        {% if flag == 0 %}
+          <p>이미지 없음</p>
+        {% else %}
+          {%if name == 'Ma'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/maf189.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 마동석님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p><br>
+          {%elif name == 'Kim'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/kimf47.jpg" width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 김수현님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p><br>
+          {%elif name == 'Ha'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/Haf187.jpg" width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 {{ 하정우 }}님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>
+          {%elif name == 'Lee'%}
+             <img src="http://127.0.0.1:8887/{{filename}}" width="400" height="400">
+             <img src="http://127.0.0.1:8887/Leef22.jpg" width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 이정재님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>
+          {%elif name == 'Song'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/songf191.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 송강호님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>
+          {%elif name == 'Park'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/Park4.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 박은빈님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>
+           {%elif name == 'Sin'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/Sinf14.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 신세경님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>  
+           {%elif name == 'IU'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/IUf4.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 아이유님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>  
+           {%elif name == 'SZ'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/SZf11.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 수지님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>
+           {%elif name == 'Oh'%}
+             <img src="http://127.0.0.1:8887/{{filename}}"width="400" height="400">
+             <img src="http://127.0.0.1:8887/Ohf88.jpg"width="400" height="400">
+             <br>
+             <p>{{ percent }}%확률로 오현경님과 일치합니다<br>
+                {{ percent2 }}%확률로 {{ name2 }}님과 일치합니다<br>
+                {{ percent3 }}%확률로 {{ name3 }}님과 일치합니다
+             </p>  
+          {% endif %}
+        {% endif %}
+    </div>
+
+    </div>
+</div>
+</body>
+</html>

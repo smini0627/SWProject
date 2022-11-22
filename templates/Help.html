@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SW프로젝트</title>
+    <style>
+        #header {
+            position : fixed;
+            background-color :darkblue;
+            text-align : center;
+            color : whitesmoke;
+            font-weight: bold;
+            font-family : 'Times New Roman', Times, serif;
+            height : 70px;
+            width : 1440px;
+            top : 0;
+            left : 0;
+            right : 0;
+            line-height: 70px;
+            margin : auto;
+            font-size: 25px;
+        }
+        nav ul{
+            width : 1440px;
+            background-color: rgb(19, 5, 22);
+            font-size: 20px;
+            margin: 0; 
+            padding: 0;
+
+        }
+
+        nav ul li {
+            width : 33%;
+            display: inline-block;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+
+        #main{
+            position : fixed;
+            width : 1440px;
+            background-color :cadetblue;
+            height : 1400px;
+            text-align : left;
+            color : antiquewhite;
+        }
+
+        #footer{
+            text-align : center;
+            color: white;
+        }
+
+        span{
+            color:black;
+        }
+        </style>
+</head>
+<body style="background-color:darkgray">
+<div>
+    <div id ="header">SW프로젝트 이미지 분류 모델
+        <div id ="menu">
+            <nav>
+                <ul>
+                    <li><a href="http://localhost:80">메인</a></li>
+                    <li><a href="http://localhost:80/classifier">결과</a></li>
+                    <li><a href="http://localhost:80/Help">도움말</a></li>
+                </ul>
+            </nav>
+        </div>
+    
+    <div id ="main">
+        <p>
+            <span>프로젝트명 :</span> 닮은꼴 연예인 찾기<br>
+            <span>제작 :</span> 202144018 S/W프로젝트 N반 임성민<br>
+            <span>개요 :</span> CNN신경망을 이용한 이미지 분류 모델로 이미지를 업로드하면 어떤 연예인과 닮았는지 알려줍니다<br>
+            <span>연예인목록 :</span> 마동석 , 김수현 , 이정재 , 송강호 , 하정우<br>
+            <span>업로드 가능한 파일 :</span> jpg , png , jpeg<hr color = "black">
+            <div id = "footer">
+                본 웹사이트는 인하공업전문대학 S/W프로젝트 수업의 프로젝트 결과물로 수익을 창출하지 않음을 밝힙니다</div>
+            
+        </p>
+    </div>
+    </div>
+</div>
+</body>
+</html>
