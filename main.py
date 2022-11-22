@@ -79,7 +79,7 @@ def fileupload():
                 os.remove(base+'.jpeg')
 
             filename = "face_" + file
-            filepath = "Image/face_" + file
+            filepath = "static/face_" + file
 
             img = cv2.imread(file)
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
